@@ -23,7 +23,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.dariyai.color",
+      "bundleIdentifier": "net.darii.color",
       "infoPlist": {
         "NSCameraUsageDescription": "We need camera access to analyze images with AI"
       }
@@ -33,7 +33,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.dariyai.color",
+      "package": "net.darii.color",
       "permissions": ["CAMERA"],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
