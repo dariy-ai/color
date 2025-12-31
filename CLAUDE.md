@@ -16,19 +16,37 @@ Cross-platform mobile application (iOS + Android) that captures photos via camer
 - **State Management**: Zustand or Redux Toolkit
 - **Development Tools**: ESLint, Prettier
 
+## Repository Structure
+
+All source code and development files are located in the `src/` subdirectory:
+
+```
+color/
+├── CLAUDE.md           # This file - development guidance
+├── README.md           # Project documentation
+├── pre-discovery.md    # Project planning notes
+├── .gitignore          # Git ignore rules
+└── src/                # All source code lives here
+    ├── App.tsx         # Main app component
+    ├── index.ts        # Entry point
+    ├── app.json        # Expo configuration
+    ├── package.json    # Dependencies
+    ├── tsconfig.json   # TypeScript configuration
+    ├── .env.example    # Environment variables template
+    ├── assets/         # Images, icons, splash screens
+    ├── node_modules/   # Dependencies (gitignored)
+    └── code/           # Application code
+        ├── screens/    # Main UI screens (CameraScreen, ResultScreen)
+        ├── components/ # Reusable components (CameraPreview, ImageAnalysis)
+        ├── services/   # External API integrations (cameraService, claudeService)
+        ├── hooks/      # Custom React hooks (useCamera, useImageAnalysis)
+        ├── utils/      # Utility functions (imageUtils - resize, compress, convert)
+        └── types/      # TypeScript type definitions
+```
+
 ## Architecture
 
-The codebase follows a modular MVVM-like pattern with React hooks:
-
-```
-src/
-├── screens/        # Main UI screens (CameraScreen, ResultScreen)
-├── components/     # Reusable components (CameraPreview, ImageAnalysis)
-├── services/       # External API integrations (cameraService, claudeService)
-├── hooks/          # Custom React hooks (useCamera, useImageAnalysis)
-├── utils/          # Utility functions (imageUtils - resize, compress, convert)
-├── types/          # TypeScript type definitions
-```
+The codebase follows a modular MVVM-like pattern with React hooks.
 
 ### Key Architectural Principles
 
@@ -39,7 +57,12 @@ src/
 
 ## Development Commands
 
+**IMPORTANT**: All commands must be run from the `src/` directory.
+
 ```bash
+# Navigate to source directory
+cd src
+
 # Install dependencies
 npm install
 
